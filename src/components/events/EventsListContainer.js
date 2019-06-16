@@ -44,7 +44,7 @@ class EventsListContainer extends React.Component {
   };
 
   render() {
-    const { users, authenticated } = this.props;
+    const { authenticated } = this.props;
     return (
       <div className="EventList">
         <Animated

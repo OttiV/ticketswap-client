@@ -5,6 +5,7 @@ import { getTickets, createTicket } from "../../actions/tickets";
 import EventDetails from "./EventDetails";
 import TicketForm from "../tickets/TicketForm";
 import { userId } from "../../jwt";
+import "./EventDetails.css";
 
 class EventDetailsContainer extends React.Component {
   componentDidMount() {
@@ -47,7 +48,7 @@ class EventDetailsContainer extends React.Component {
   };
 
   render() {
-    const { authenticated, events, tickets } = this.props;
+    const { authenticated, events } = this.props;
     const editMode = this.state.editMode;
     const thisEvent =
       events && events.find(event => event.id == this.props.match.params.id);

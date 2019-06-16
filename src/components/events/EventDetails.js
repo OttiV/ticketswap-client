@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./EventDetails.css";
 import { Animated } from "react-animated-css";
+import "./EventDetails.css";
 
 export default class EventDetails extends Component {
   renderTicket = ticket => {
@@ -24,7 +24,6 @@ export default class EventDetails extends Component {
     );
   };
   render() {
-    const { events } = this.props;
     const { tickets, eventId } = this.props;
 
     const eventTickets = tickets && Object.values(tickets).filter(t => t.eventId == eventId);
