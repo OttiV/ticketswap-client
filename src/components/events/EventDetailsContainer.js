@@ -38,7 +38,6 @@ class EventDetailsContainer extends React.Component {
   };
 
   onSubmit = ticket => {
-    console.log('this.state.formValues', this.state.formValues)
     ticket.preventDefault();
     this.setState({
       editMode: false

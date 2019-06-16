@@ -25,9 +25,6 @@ export default class EventDetails extends Component {
   };
   render() {
     const { events } = this.props;
-    console.log("this.props.tickets", this.props.tickets);
-    // console.log('FRAUDRISK', this.props.tickets.fraudrisk)
-
     const { tickets, eventId } = this.props;
 
     const eventTickets = tickets && Object.values(tickets).filter(t => t.eventId == eventId);

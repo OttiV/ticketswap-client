@@ -1,16 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
-// import { loadEvents, createEvent } from "../../actions/events";
 import { getEvents, createEvent } from "../../actions/events";
 import { Animated } from "react-animated-css";
 import EventsList from "./EventsList";
-// import EventFormContainer from "./EventFormContainer";
 import EventForm from "./EventForm";
 import { userId } from "../../jwt";
 
 class EventsListContainer extends React.Component {
   componentDidMount() {
-    // this.props.loadEvents();
     this.props.getEvents();
   }
 
