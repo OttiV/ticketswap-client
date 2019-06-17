@@ -52,6 +52,7 @@ class EventDetailsContainer extends React.Component {
     const editMode = this.state.editMode;
     const thisEvent =
       events && events.find(event => event.id == this.props.match.params.id);
+      
 
     return (
       <div className="EventDetailsContainer">

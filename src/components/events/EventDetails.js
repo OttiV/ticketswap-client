@@ -25,9 +25,8 @@ export default class EventDetails extends Component {
   };
   render() {
     const { tickets, eventId } = this.props;
-
     const eventTickets = tickets && Object.values(tickets).filter(t => t.eventId == eventId);
-    console.log("eventTickets", eventTickets);
+    
     return (
       <div className="EventDetailsContainer">
         <div className="EventDetails">

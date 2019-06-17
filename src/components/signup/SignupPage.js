@@ -11,7 +11,7 @@ class SignupPage extends PureComponent {
   };
 
   render() {
-    if (this.props.signup.success) return <Redirect to="/" />;
+    if (this.props.signup.success) return <Redirect to="/login" />;
 
     return (
       <div className="signup-form">
@@ -27,7 +27,8 @@ class SignupPage extends PureComponent {
             >
               <img
                 className="gif"
-                src="https://media.giphy.com/media/12XMGIWtrHBl5e/giphy.gif" alt="NOPE"
+                src="https://media.giphy.com/media/12XMGIWtrHBl5e/giphy.gif"
+                alt="NOPE"
               />{" "}
               <br />
               {this.props.signup.error}
