@@ -14,7 +14,7 @@ const TopBar = props => {
   return (
     <AppBar
       className="AppBar"
-      position="absolute"
+      position="fixed"
       style={{ zIndex: 10, margin: 0 }}
     >
       <Toolbar className="Toolbar">
