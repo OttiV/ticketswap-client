@@ -3,7 +3,7 @@
 This repo contains a frontend and uses React/Redux.
 Once the server is up and running, you can singup and login to create your first event, to which you can add tickets, to which you can add comments.
 
-<a href= "https://gfycat.com/competentcomplicatedaustrianpinscher"> <img src="https://gfycat.com/competentcomplicatedaustrianpinscher" title="Add Event"/></a>
+
 
 The tickets will display a Fraudrisk which is and algorithm created in the backend, that takes into account:
 * if the ticket is the only ticket of the author, adds 10%
