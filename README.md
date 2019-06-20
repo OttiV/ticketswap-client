@@ -3,6 +3,8 @@
 This repo contains a frontend and uses React/Redux.
 Once the server is up and running, you can singup and login to create your first event, to which you can add tickets, to which you can add comments.
 
+https://www.secondcity.com/wp-content/uploads/2016/05/formationtour.jpg?_=1464100730
+
 The tickets will display a Fraudrisk which is and algorithm created in the backend, that takes into account:
 * if the ticket is the only ticket of the author, adds 10%
 * if the ticket price is lower than the average ticket price for that event:
