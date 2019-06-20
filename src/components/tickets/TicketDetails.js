@@ -15,8 +15,10 @@ export default class TicketDetails extends Component {
   render() {
     const comments = this.props.comments;
 
-    const ticketComments = comments && comments.filter(comment => comment.ticketId == this.props.ticketId);
-
+    const ticketComments =
+      comments &&
+      comments.filter(comment => comment.ticketId == this.props.ticketId);
+console.log('ticketComments', ticketComments)
     return (
       <div className="EventDetailsContainer">
         {this.props.thisTicket && !this.props.editMode && (
@@ -37,9 +39,11 @@ export default class TicketDetails extends Component {
               <p>Description: {this.props.thisTicket.description} </p>
               <p>Price: € {this.props.thisTicket.price} </p>
             </Animated>
-           
+
             <div className="CommentsList">
-              {/* {ticketComments.length < 1 && "No comments have been posted"} */}
+              {ticketComments &&
+                ticketComments.length < 1 &&
+                "No comments have been posted"}
               {ticketComments && (
                 <div>
                   <h2>Comments:</h2>
@@ -50,7 +54,6 @@ export default class TicketDetails extends Component {
             </div>
           </div>
         )}
-        
       </div>
     );
   }
