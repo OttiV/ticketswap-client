@@ -5,6 +5,7 @@ import "./TicketsList.css";
 
 export default class TicketDetails extends Component {
   renderComment = comment => {
+
     return (
       <div className="Comments" key={comment.id}>
         User Id: {comment.userId} <br />
@@ -18,7 +19,7 @@ export default class TicketDetails extends Component {
     const ticketComments =
       comments &&
       comments.filter(comment => comment.ticketId == this.props.ticketId);
-console.log('ticketComments', ticketComments)
+
     return (
       <div className="EventDetailsContainer">
         {this.props.thisTicket && !this.props.editMode && (

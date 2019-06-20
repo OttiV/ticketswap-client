@@ -9,7 +9,6 @@ import "./TopBar.css";
 
 const TopBar = props => {
   const { history, user } = props;
-  console.log("user", user);
 
   return (
     <AppBar
@@ -48,10 +47,6 @@ const TopBar = props => {
 
 const mapStateToProps = state => ({
   user: state.currentUser
-  // &&
-  // state.users
-  //  &&
-  // state.users[userId(state.currentUser.jwt)]
 });
 
 export default withRouter(connect(mapStateToProps)(TopBar));

@@ -33,13 +33,14 @@ class TicketDetailsContainer extends React.Component {
       }
     });
   };
+  
 
   onSubmit = comment => {
     comment.preventDefault();
     this.setState({
       editMode: false
     });
-    console.log("FORM VALUES", this.state.formValues);
+   
     this.props.createComment(this.state.formValues);
   };
   render() {
@@ -47,7 +48,7 @@ class TicketDetailsContainer extends React.Component {
     const editMode = this.state.editMode;
     const thisTicket =
       tickets && tickets.find(t => t.id == this.props.match.params.id);
-
+    
     return (
       <div className="EventDetailsContainer">
         <div>
@@ -85,7 +86,6 @@ class TicketDetailsContainer extends React.Component {
 
 const mapStateToProps = state => ({
   authenticated: state.currentUser !== null,
-  users: state.users === null ? null : state.users,
   userId: state.currentUser && userId(state.currentUser.jwt),
   tickets:
     state.tickets === null

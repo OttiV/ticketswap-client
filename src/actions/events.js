@@ -26,25 +26,21 @@ export const getEvents = () => (dispatch, getState) => {
   request
     .get(`${baseUrl}/events`)
     .then(result => {
-      console.log("result.body for events", result.body);
       dispatch(updateEvents(result.body));
     })
     .catch(err => console.error(err));
 };
 
 export const createEvent = data => (dispatch, getState) => {
-  console.log(data);
+  
   const state = getState();
   const jwt = state.currentUser.jwt;
-
-  // if (isExpired(jwt)) return dispatch(logout());
 
   request
     .post(`${baseUrl}/events`)
     .set("Authorization", `Bearer ${jwt}`)
     .send(data)
     .then(result => {
-      console.log(result.body);
       dispatch(addEvent(result.body));
     })
     .catch(err => console.error(err));

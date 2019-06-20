@@ -32,7 +32,6 @@ export const getComments = () => (dispatch, getState) => {
 };
 
 export const createComment = data => (dispatch, getState) => {
-  console.log(data);
   const state = getState();
   const jwt = state.currentUser.jwt;
 
@@ -41,7 +40,6 @@ export const createComment = data => (dispatch, getState) => {
     .set("Authorization", `Bearer ${jwt}`)
     .send(data)
     .then(result => {
-      console.log(result.body);
       dispatch(addComment(result.body));
     })
     .catch(err => console.error(err));
