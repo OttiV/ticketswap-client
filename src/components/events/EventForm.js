@@ -31,6 +31,7 @@ export default class EventForm extends React.Component {
           <br />
           <input
             name="startDate"
+            placeholder="YYYY-MM-DD"
             value={this.props.startDate}
             onChange={this.props.onChange}
             className={"EventForm_input"}
@@ -40,6 +41,7 @@ export default class EventForm extends React.Component {
           <br />
           <input
             name="endDate"
+            placeholder="YYYY-MM-DD"
             value={this.props.endDate}
             onChange={this.props.onChange}
             className={"EventForm_input"}
